@@ -1,5 +1,8 @@
-h1 View Users
+extends ../layouts/common.pug
 
-ul 
-  span Name - Age
-    li= user.name + " - " + user.age
+block content
+block header
+  h1 View Users
+  ul 
+    span Name - Age
+      li= user.name + " - " + user.age

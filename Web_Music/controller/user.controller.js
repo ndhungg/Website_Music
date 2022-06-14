@@ -36,28 +36,6 @@ module.exports.get = function (req, res) {
 //gửi dữ liệu từ form và lưu vào database
 module.exports.PostCreate = function (req, res) {
   req.body.id = shortid.generate();
-  var errors = [];
-
-  if(!req.body.name){
-    errors.push('Bạn chưa nhập tên!');
-  };
-
-  if(!req.body.phone){
-    errors.push('Bạn chưa nhập số điện thoại!');
-  };
-
-  if(!req.body.age){
-    errors.push('Bạn chưa nhập tuổi!');
-  };
-
-  if(errors.length){
-    res.render("users/create",{
-        errors: errors,
-        values: req.body 
-    });
-    return;
-  };
-
   db.get("users").push(req.body).write();
   res.redirect("/users");
 };

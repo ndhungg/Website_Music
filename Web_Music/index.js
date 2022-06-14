@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const userRouter = require('./routers/user.router');
 
 const port = 3000;
-
 const app = express();
 
 
@@ -18,14 +17,15 @@ app.use(bodyParser.urlencoded({ extended: true }))
 //cấu hình router người dùng
 app.use('/users', userRouter);
 
+//Lấy ra các file bên trong folder public
+app.use(express.static('public'))
+
 
 app.get('/', (req, res) => {
   res.render('index',{
     name:'Nguyễn Đình Hùng',
   });
 });
-
-
 
 app.listen(port, () => {
   console.log(`Example app listening http://localhost:${port}`)

@@ -1,12 +1,20 @@
 extends ../layouts/common.pug
-block content
-    h1 Create Users
-    form(action="/users/create", method="POST")
-        lable Name 
-        input(type="text", name="name")
-        br
-        lable Age 
-        input(type="text", name="age", class="mt-4")
-        br
-        button(class="mt-4") Create Users
+block content 
+    .container.d-flex
+        .row
+            h1 Create Users
+            if errors
+               each error in errors
+                    .alert.alert-danger= error
+            form(action="/users/create", method="POST" class="mt-4")
+                .form-group.mt-4
+                    lable(for='name') Name 
+                    input(type="text", name="name",id="name", class="mb-2 form-control", value=values ? values.name : "")
+                .form-group.mt-4
+                    lable(for='phone') Phone 
+                    input(type="text", name="phone",id="phone", class="mb-2 form-control", value=values ? values.phone : "")
+                .form-group.mt-4
+                    lable(for='age') Age 
+                    input(type="text", name="age",id="age", class="mb-2 form-control", value=values ? values.age : "")
+                    button.btn.btn-primary(class="mt-4") Create Users
 

@@ -1,18 +1,29 @@
 extends ../layouts/common.pug
 
 block content 
-block header 
+  .container
+    h1 List Users 
+    .align-items-center
+      a.btn.btn-primary(href="/users/create") New
+      form.mt-4(action="/users/search", method="GET", class="d-flex ml-auto")
+        input(type="text", name='q',class="form-control user-input")
+        button(class="btn btn-primary mt-8 ml-2") Search
 
-  h1 List Users
-  a(href="/users/create") New
-  form(action="/users/search", method="GET")
-      input(type="text", name='q')
-      button Search
-  ul
-    each user, index in users
-      li
-        span=index+1 + ': ' +user.name + ' - '+user.age
-        span &nbsp;
-        a(href="/users/" +user.id) View
-    else 
-      li Not found
+    table.table
+      tr
+        th STT
+        th Name
+        th Phone
+        th Age
+        th Action
+      each user, index in users
+        tr
+          td=index+1
+          td=user.name
+          td=user.phone
+          td=user.age
+          td
+            a.btn.btn-danger(href="/users/" +user.id) View
+      else 
+        li Not found
+

@@ -1,44 +1,28 @@
 {
   "users": [
     {
-      "name": "hung123",
+      "name": "hung",
+      "phone": "11234567",
       "age": "18",
-      "id": "m9B9tVQ20"
-    },
-    {
-      "name": "hung123",
-      "age": "18",
-      "id": "V8Stz86E-"
-    },
-    {
-      "name": "N.Anh",
-      "age": "20",
-      "id": "DYRDIyCHT"
+      "id": "eTCX_8RpU"
     },
     {
       "name": "minh anh",
-      "age": "19",
-      "id": "qw19f-uKv"
+      "phone": "1212",
+      "age": "20",
+      "id": "sKUyaPD4s"
     },
     {
       "name": "hung",
-      "age": "18",
-      "id": "S5bEop6sU"
-    },
-    {
-      "name": "",
-      "age": "",
-      "id": "CP1cTG1vp"
+      "phone": "11234567",
+      "age": "20",
+      "id": "3JxTY2PmF"
     },
     {
       "name": "hung",
+      "phone": "1212",
       "age": "18",
-      "id": "1h2DpRYVF"
-    },
-    {
-      "name": "",
-      "age": "",
-      "id": "kBhWdXeQY"
+      "id": "UMCI-EDMr"
     }
   ]
 }

@@ -20,4 +20,5 @@ module.exports.PostCreate = function (req, res, next) {
     });
     return;
   }
+  next();
 };

@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser')
 const userRouter = require('./routers/user.router');
+const authRouter = require('./routers/auth.router');
 
 const port = 3000;
 const app = express();
@@ -12,10 +14,12 @@ app.set('views', './views');
 
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 //cấu hình router người dùng
 app.use('/users', userRouter);
+app.use('/auth', authRouter);
 
 //Lấy ra các file bên trong folder public
 app.use(express.static('public'))

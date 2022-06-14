@@ -1,0 +1,16 @@
+extends ../layouts/common.pug
+block content 
+    .container.d-flex
+        .row
+            h1 Login
+            if errors
+               each error in errors
+                    .alert.alert-danger= error
+            form(action="/auth/login", method="POST" class="mt-4")
+                .form-group.mt-4
+                    lable(for='email') Email 
+                    input(type="email", name="email",id="email", class="mb-2 form-control", value=values ? values.email : "")
+                .form-group.mt-4
+                    lable(for='password') Password 
+                    input(type="password", name="password",id="password", class="mb-2 form-control", value=values ? values.password : "")
+                    button.btn.btn-primary(class="mt-4") Login

@@ -4,25 +4,17 @@
       "name": "hung",
       "phone": "11234567",
       "age": "18",
-      "id": "eTCX_8RpU"
+      "id": "eTCX_8RpU",
+      "email": "hung@gmail.com",
+      "password": "123456"
     },
     {
       "name": "minh anh",
       "phone": "1212",
       "age": "20",
-      "id": "sKUyaPD4s"
-    },
-    {
-      "name": "hung",
-      "phone": "11234567",
-      "age": "20",
-      "id": "3JxTY2PmF"
-    },
-    {
-      "name": "hung",
-      "phone": "1212",
-      "age": "18",
-      "id": "UMCI-EDMr"
+      "id": "sKUyaPD4s",
+      "email": "minhanh@gmail.com",
+      "password": "12345678"
     }
   ]
 }

@@ -1,6 +1,8 @@
 const express = require('express');
+const path = require('path');
+const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
 const userRouter = require('./routers/user.router');
 const authRouter = require('./routers/auth.router');
 
@@ -13,6 +15,10 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 
 
+// Template engine
+
+//app.engine('handlebars', engine());
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -22,7 +28,10 @@ app.use('/users', userRouter);
 app.use('/auth', authRouter);
 
 //Lấy ra các file bên trong folder public
-app.use(express.static('public'))
+app.use(express.static('public'));
+
+
+app.use(morgan('combined'));
 
 
 app.get('/', (req, res) => {

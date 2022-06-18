@@ -15,6 +15,18 @@
       "id": "sKUyaPD4s",
       "email": "minhanh@gmail.com",
       "password": "12345678"
+    },
+    {
+      "name": "Vy",
+      "phone": "11234567",
+      "age": "18",
+      "id": "-JQg4W13z"
+    },
+    {
+      "name": "Tiến Hoàng",
+      "phone": "Hoang@gmail.com",
+      "age": "1234567",
+      "id": "Wiq96Wjde"
     }
   ]
 }

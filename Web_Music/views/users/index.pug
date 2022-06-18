@@ -2,7 +2,7 @@ extends ../layouts/common.pug
 
 block content 
   .container
-    h1 List Users 
+    h1 Danh sách người dùng
     .align-items-center
       a.btn.btn-primary(href="/users/create") New
       form.mt-4(action="/users/search", method="GET", class="d-flex ml-auto")
@@ -12,16 +12,16 @@ block content
     table.table
       tr
         th STT
-        th Name
-        th Phone
-        th Age
+        th Tên
+        th Email
+        th Số điện thoại
         th Action
       each user, index in users
         tr
           td=index+1
           td=user.name
+          td=user.email
           td=user.phone
-          td=user.age
           td
             a.btn.btn-danger(href="/users/" +user.id) View
       else 
